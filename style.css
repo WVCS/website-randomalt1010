@@ -1,22 +1,20 @@
-body {
-  background-color: beige;
-  
-}
-
 h3 {
-  color: purple;
-  font-size: 413%;
-  text-shadow: 2px 2px red;
-  letter-spacing: 2px;
-  
+  font-size: 340%;
+  color: red;
+  text-decoration: underline dotted;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the text */
+  letter-spacing: 2px; /* Adds spacing between letters */
+  background: linear-gradient(45deg, #ff0000, #ff7300); /* Gradient color effect */
+  -webkit-background-clip: text; /* Clips the gradient to the text */
+  color: transparent; /* Make text color transparent so the gradient shows */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for effects */
 }
 
-img {
-  width: 20%;
-  border-radius: 50%;
+h3:hover {
+  transform: scale(1.1); /* Slightly increases the size on hover */
+  color: yellow; /* Changes the text color on hover */
 }
 
-img:hover {
-  border: dashed-red 6px;
-  width: 32%
+body {
+  background-color: #456990;
 }
