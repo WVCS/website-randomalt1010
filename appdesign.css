@@ -33,3 +33,51 @@ h3:hover::after {
 body {
   background-color: #456990;
 }
+ul {
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.8); /* Lighter background for the navbar */
+  margin: 0;
+  width: 100%;
+  padding: 15px 0;
+  top: 0;
+  left: 0;
+  position: fixed;
+  opacity: 0.9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow beneath the navbar */
+  z-index: 1000; /* Keeps the navbar on top of the content */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background change */
+}
+
+ul:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Darkens the navbar background on hover */
+}
+
+li {
+  display: inline-block;
+  padding: 8px 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: translateY(-5px); /* Slight upward movement on hover */
+}
+li:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #ff6347; /* Adds a nice hover underline */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-in-out;
+}
+
+li:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
